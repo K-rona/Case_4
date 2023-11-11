@@ -23,6 +23,8 @@ dictionary[last_word] = [np.random.choice(words)]
 print(dictionary)
 
 first_word = np.random.choice(words)
+while first_word.islower():
+    first_word = np.random.choice(words)
 
 for i in symbols:
     if i in first_word:
@@ -33,7 +35,11 @@ result = [first_word]
 while count <= number:
 
     next_word = np.random.choice(dictionary[result[-1]])
-    result.append(next_word)
+    if next_word[0] == "—":
+        result[-1] = result[-1] +"\n"
+        result.append(next_word)
+    else:
+        result.append(next_word)
 
     for i in symbols:
         if i in next_word:
