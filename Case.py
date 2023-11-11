@@ -1,6 +1,3 @@
-from random import *
-import numpy as np
-
 with open('input.txt', 'r', encoding='utf-8') as f_in:
     number = int(f_in.readline().rstrip())
     text = f_in.read()
@@ -28,7 +25,7 @@ result = [first_word]
 
 while count <= number:
 
-    next_word = np.random.choice(dictionary[first_word])
+    next_word = np.random.choice(dictionary[first_word[-1]])
     result.append(next_word)
 
     for i in symbols:
