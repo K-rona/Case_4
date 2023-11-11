@@ -20,7 +20,6 @@ for word1 in range(len(words) - 1):
 
 last_word = words.pop()
 dictionary[last_word] = [np.random.choice(words)]
-print(dictionary)
 
 first_word = np.random.choice(words)
 while first_word.islower():
@@ -45,4 +44,6 @@ while count <= number:
         if i in next_word:
             count += 1
 
-print(' '.join(result))
+text = ' '.join(result)
+with open('output.txt','w+',encoding='utf-8') as f_out:
+    f_out.write(text)
