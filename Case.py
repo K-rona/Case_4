@@ -1,3 +1,5 @@
+import numpy as np
+
 with open('input.txt', 'r', encoding='utf-8') as f_in:
     number = int(f_in.readline().rstrip())
     text = f_in.read()
