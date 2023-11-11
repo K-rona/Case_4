@@ -16,7 +16,8 @@ for word1 in range(len(words) - 1):
     else:
         dictionary[words[word1]] = [words[word2]]
 
-words.pop(len(words) - 1)
+last_word = words.pop()
+dictionary[last_word] = [np.random.choice(words)]
 print(dictionary)
 
 first_word = np.random.choice(words)
