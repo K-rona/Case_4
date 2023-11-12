@@ -1,3 +1,7 @@
+'''
+Аронова Александра - 58
+Якимова Антонина - 
+'''
 import numpy as np
 
 with open('input.txt', 'r', encoding='utf-8') as f_in:
@@ -35,7 +39,7 @@ while count <= number:
 
     next_word = np.random.choice(dictionary[result[-1]])
     if next_word[0] == "—":
-        result[-1] = result[-1] +"\n"
+        result[-1] = result[-1] + "\n"
         result.append(next_word)
     else:
         result.append(next_word)
@@ -47,3 +51,4 @@ while count <= number:
 text = ' '.join(result)
 with open('output.txt','w+',encoding='utf-8') as f_out:
     f_out.write(text)
+    
